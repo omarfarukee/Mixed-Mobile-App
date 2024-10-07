@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "919902370400",
+    "project_id": "journals-app-a5e71",
+    "storage_bucket": "journals-app-a5e71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919902370400:android:c8a2420e7a59bd677a2105",
+        "android_client_info": {
+          "package_name": "com.Omar.journal.App"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5kDEiIERgA6YQHBoJqAZHggEgN2S_Aqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

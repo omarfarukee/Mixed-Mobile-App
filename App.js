@@ -1,20 +1,80 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Signup from "./Components/Signup";
+import Login from "./Components/Login";
+import Home from "./Components/Home";
+import { GetUser } from "./Hooks/GetUser";
+import User from "./Components/User";
+import Food from "./Components/Food/Food";
+import MealDetails from "./Components/Food/MealDetails";
+import Student from "./Components/Students/Students";
+import StudentDetails from "./Components/Students/StudentsDetails";
+import EditStudent from "./Components/Students/EditStudent";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
+  const { user, initializing } = GetUser(); // Use the custom hook
+
+  if (initializing) {
+    // You can show a loading screen or loader here
+    return (
+      <View style={styles.container}>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Login"
+        screenOptions={({ route }) => ({
+          headerStyle: { backgroundColor: "#adc178" },
+          headerTintColor: "#fff",
+          headerTitleStyle: { fontWeight: "bold" },
+          contentStyle: { backgroundColor: "#dde5b6" },
+          headerTitle: () => (
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
+              <Text style={{ fontWeight: "bold", fontSize: 18, color: "#fff", marginRight: 10 }}>
+                {/* Display the default title dynamically */}
+                {route.name}
+              </Text>
+              <Image
+                source={require("./assets/logo2.png")} // Replace with your logo path
+                style={{ width: 50, height: 50, borderWidth:2, marginBottom:8 }} // Adjust logo size
+              />
+            </View>
+          ),
+        })}
+      >
+        {!user ? (
+          <>
+            <Stack.Screen name="Signup" component={Signup} />
+            <Stack.Screen name="Login" component={Login} />
+          </>
+        ) : (
+          <>
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="User-Profile" component={User} />
+          <Stack.Screen name="Food" component={Food} />
+          <Stack.Screen name="MealDetails" component={MealDetails} />
+          <Stack.Screen name="Student" component={Student} />
+          <Stack.Screen name="StudentDetails" component={StudentDetails} />
+          <Stack.Screen name="EditStudent" component={EditStudent} />
+          </>
+        
+        )}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
