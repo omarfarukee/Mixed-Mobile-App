@@ -13,7 +13,7 @@ export default function Student({ navigation }) {
         setLoading(true);
         const response = await fetch("https://resolute-school-server.vercel.app/students");
         const data = await response.json();
-        console.log("API Data:", data); // Log the data here
+        // console.log("API Data:", data);
         setStudents(data); // Check if data.students exists
         setLoading(false);
         
