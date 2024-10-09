@@ -182,7 +182,7 @@ const handleUpdate = async () => {
         {updating && (
           <ActivityIndicator
             size="small"
-            color="#fff"
+            color="#245501"
             style={styles.loaderInline}
           />
         )}
@@ -237,8 +237,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    borderWidth: 1,
-    backgroundColor: "#245501",
   },
   loaderInline: {
     marginLeft: 10, // Space between button text and loader
