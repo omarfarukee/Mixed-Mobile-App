@@ -11,6 +11,9 @@ export default function Home({ navigation }) {
   const onPressStudentPage = () => {
     navigation.navigate("Student")
   }
+  const onPressAddStudentPage = () => {
+    navigation.navigate("AddStudent")
+  }
   return (
     <View>
     <View style={styles.container}>
@@ -32,6 +35,15 @@ export default function Home({ navigation }) {
         <Text>User</Text>
       </TouchableOpacity>
 
+      <TouchableOpacity onPress={onPressStudentPage} style={styles.homeOption}>
+        <Icon name="user-graduate" size={50} color="#4a7c59" />
+        <Text>Students</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={onPressAddStudentPage} style={styles.homeOption}>
+        <Icon name="user-plus" size={50} color="#4a7c59" />
+        <Text>Add Student</Text>
+      </TouchableOpacity>
       <TouchableOpacity onPress={onPressStudentPage} style={styles.homeOption}>
         <Icon name="user-graduate" size={50} color="#4a7c59" />
         <Text>Students</Text>

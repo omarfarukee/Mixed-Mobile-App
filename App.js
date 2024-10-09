@@ -11,6 +11,7 @@ import MealDetails from "./Components/Food/MealDetails";
 import Student from "./Components/Students/Students";
 import StudentDetails from "./Components/Students/StudentsDetails";
 import EditStudent from "./Components/Students/EditStudent";
+import AddStudent from "./Components/Students/AddStudent";
 
 const Stack = createNativeStackNavigator();
 
@@ -63,6 +64,7 @@ export default function App() {
           <Stack.Screen name="Student" component={Student} />
           <Stack.Screen name="StudentDetails" component={StudentDetails} />
           <Stack.Screen name="EditStudent" component={EditStudent} />
+          <Stack.Screen name="AddStudent" component={AddStudent} />
           </>
         
         )}
