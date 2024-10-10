@@ -58,9 +58,9 @@ export default function Home({ navigation }) {
           <Icon name="user-plus" size={50} color="#4a7c59" />
           <Text>Add Student</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("Student")} style={styles.homeOption}>
-          <Icon name="user-graduate" size={50} color="#4a7c59" />
-          <Text>Students</Text>
+        <TouchableOpacity onPress={() => navigation.navigate("Info")} style={styles.homeOption}>
+          <Icon name="info" size={50} color="#4a7c59" />
+          <Text>Info</Text>
         </TouchableOpacity>
       </View>
 
@@ -119,12 +119,13 @@ const styles = StyleSheet.create({
     elevation: 10,
   },
   sliderContainer: {
-    height: 300, // Set height for the slider
+    height: 250, // Set height for the slider
     marginTop: 300,
-    padding:16
+    padding:16,
+    borderRadius:10
   },
   sliderImage: {
-    width: width, // Full width of the device
+    width: 400, // Full width of the device
     height: 200,
     resizeMode: "cover",
     borderRadius:10

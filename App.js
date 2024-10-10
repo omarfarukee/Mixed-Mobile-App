@@ -12,6 +12,7 @@ import Student from "./Components/Students/Students";
 import StudentDetails from "./Components/Students/StudentsDetails";
 import EditStudent from "./Components/Students/EditStudent";
 import AddStudent from "./Components/Students/AddStudent";
+import Info from "./Components/Info";
 
 const Stack = createNativeStackNavigator();
 
@@ -65,6 +66,7 @@ export default function App() {
           <Stack.Screen name="StudentDetails" component={StudentDetails} />
           <Stack.Screen name="EditStudent" component={EditStudent} />
           <Stack.Screen name="AddStudent" component={AddStudent} />
+          <Stack.Screen name="Info" component={Info} />
           </>
         
         )}
