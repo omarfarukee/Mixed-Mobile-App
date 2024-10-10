@@ -17,10 +17,9 @@ import Info from "./Components/Info";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const { user, initializing } = GetUser(); // Use the custom hook
+  const { user, initializing } = GetUser();
 
   if (initializing) {
-    // You can show a loading screen or loader here
     return (
       <View style={styles.container}>
         <Text>Loading...</Text>
@@ -40,12 +39,11 @@ export default function App() {
           headerTitle: () => (
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <Text style={{ fontWeight: "bold", fontSize: 18, color: "#fff", marginRight: 10 }}>
-                {/* Display the default title dynamically */}
                 {route.name}
               </Text>
               <Image
-                source={require("./assets/logo2.png")} // Replace with your logo path
-                style={{ width: 50, height: 50, borderWidth:2, marginBottom:8 }} // Adjust logo size
+                source={require("./assets/logo2.png")}
+                style={{ width: 50, height: 50, borderWidth:2, marginBottom:8 }} 
               />
             </View>
           ),

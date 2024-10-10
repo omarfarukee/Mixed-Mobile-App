@@ -21,9 +21,8 @@ const styles = StyleSheet.create({
     backgroundColor:"#fff"
   },
   image: {
-    width: 400, // Set the width of the image
-    height: 400, // Set the height of the image
-    marginTop: 20, // Add some margin to space the image from the text
-    resizeMode: "cover" // Adjust the image resizing mode
+    width: 400, 
+    height: 400, 
+    resizeMode: "cover"
   }
 });

@@ -2,6 +2,7 @@
 import { TextInput, View, StyleSheet, Image, TouchableOpacity, Text, Alert, ActivityIndicator } from 'react-native'
 import React, { useState } from 'react';
 import auth from '@react-native-firebase/auth';
+import Icon from "react-native-vector-icons/AntDesign";
 export default function Signup({ navigation }) {
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
@@ -58,12 +59,20 @@ export default function Signup({ navigation }) {
         setPassword(text)
 
       }} placeholder="Password" style={styles.inputs} secureTextEntry={true} />
+
       <TouchableOpacity onPress={handleSignUp} style={styles.button}>
-        <Text style={{ color: "#fff" }}>Sign-up</Text>
+        <Text style={{ color: "#fff", fontSize:20 }}>Sign-up</Text>
+        <Icon name="login" size={30} color="#fff" />
       </TouchableOpacity>
-      <TouchableOpacity onPress={onPressLogin} style={styles.button}>
-        <Text style={{ color: "#fff" }}>Go to Login</Text>
+      <View style={{flexDirection:"row", gap:5, alignItems:"center", justifyContent:"center", marginTop:20}}>
+        <Text style={{fontSize:20}}>Already have Account ?</Text>
+        <TouchableOpacity onPress={onPressLogin}>
+        <Text style={{ fontSize:20, fontWeight:800 }}>Go to Login</Text>
       </TouchableOpacity>
+      
+      </View>
+      
+      
     </View>
 
   )
@@ -85,6 +94,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 10,
     marginTop: 10,
+    flexDirection:"row",
+    gap:10,
+    justifyContent:"center"
   },
   loadingContainer: {
     flex: 1,
