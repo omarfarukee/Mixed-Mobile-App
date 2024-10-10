@@ -83,20 +83,6 @@ export default function StudentDetails({ route, navigation }) {
               <Icon name="user-edit" size={30} color="#fff" />
               <Text style={{ fontSize: 25, color: "#fff" }}>Edit</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                gap: 5,
-                padding: 10,
-                borderRadius: 5,
-                backgroundColor: "#28652e",
-                color: "#fff",
-              }}
-            >
-              <Icon name="trash" size={30} color="#fff" />
-              <Text style={{ fontSize: 25, color: "#fff" }}>Edit</Text>
-            </TouchableOpacity>
           </View>
         </>
       )}
