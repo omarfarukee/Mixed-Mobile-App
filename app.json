@@ -18,10 +18,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#ffffff"
-        
       },
-      "package":"com.Omar.journal.App",
-      "googleServicesFile":"./google-services.json"
+      "package": "com.Omar.journal.App",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/logo.png"
@@ -36,6 +35,11 @@
           }
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "6c6a9d34-e08f-43e0-9b3d-933b8069cd15"
+      }
+    }
   }
 }
